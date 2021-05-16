@@ -1,0 +1,18 @@
+package com.vimarsh.dto;
+
+import com.vimarsh.util.Customized;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import lombok.Data;
+
+import java.util.Date;
+
+@Data
+public class Dto {
+    private Long id;
+    private String darclName;
+    private String darclAddress;
+    @JsonDeserialize(using= Customized.class)
+    private Date darclDateTime;
+    private String[] darclContactNumbers;
+    private String darclComment;
+}
